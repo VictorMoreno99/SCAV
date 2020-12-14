@@ -1,0 +1,18 @@
+Hi,
+In this seminar what i first did is to cut the original BBB video in a 10seconds fragment.
+Then I asked the user to give a new scale to resize the video i.e. 720,360,...
+With this new scale I resized the fragment and then reconverted the resized fragment to all 4 codecs.
+Once i had the 4 codecs i made a montage of the 4 resultant videos to compare them.
+In top left we have the av1 video.
+In down left we have the vp8 video.
+In top right we have the vp9 video.
+In down right we have the h265 video.
+To compare them right we used the best quality because in 160 the quality is so poor we can not see a difference.
+So in 1280x720 we can see that vp8 has the worst quality and av1 has the best quality. This comes with a lot of computational cost
+because even though av1 has the best quality and frame rate it is also the one who takes longer to produce. So the other options as
+vp9 or h256 are pretty good because they preserve a pretty good quality and take less time and resources to compute.
+Note that in vp9 it changes a little bit the colouring.
+Then  in the streaming section, i didn't find how to execute it all from my virtual environment so what I found is a way to execute
+the streaming as a host from the virtual environment and then from another terminal visualizing the streaming with the code line:
+ffplay udp://127.0.0.1:1234
+Check that the last part is just the ip and the host and can be variable but we need to use the same ones as the host.
